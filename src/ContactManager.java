@@ -241,10 +241,13 @@ public class ContactManager implements IManager<Contact> {
             }
         }
         // Kiểm tra xem có tìm thấy liên hệ nào không
+        int count = 0;
         if (searchContact.isEmpty()) {
             System.out.println("Không tìm thấy liên hệ nào.");
         } else {
-            System.out.println("Danh sách liên hệ phù hợp với yêu cầu của bạn:");
+            count = searchContact.size();
+            System.out.println("Tìm thấy " + count + " kết quả.");
+            System.out.println("Danh sách liên hệ phù hợp với yêu cầu tìm kiếm:");
             for (Contact c : searchContact) {
                 System.out.println(c);
             }
